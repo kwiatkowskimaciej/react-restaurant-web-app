@@ -3,9 +3,16 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      Homepage
-    </div>
+    <React.Fragment className="App">
+      <header>
+        <nav>
+        </nav>
+      </header>
+      <main>
+      </main>
+      <footer>
+      </footer>
+    </React.Fragment>
   );
 }
 
