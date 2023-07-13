@@ -3,7 +3,7 @@ const LandingSection = () => {
     <section className="landing-section">
       <div className="container">
         <div className="hero">
-          <div>
+          <div className="lead">
             <h1>Little Lemon</h1>
             <h2>Chicago</h2>
             <p>
@@ -12,7 +12,7 @@ const LandingSection = () => {
             </p>
             <button>Reserve a table</button>
           </div>
-          <div className='hero-image'>
+          <div className="hero-image">
             <img
               src={require('../images/restauranfood.jpg')}
               alt="Four bruschettas on a black wooden board"
