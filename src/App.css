@@ -4,6 +4,7 @@
   --highlight-1: #edefee;
   --highlight-2: #333333;
   --secondary-1: #ee9972;
+  --secondary-2: #fbdabb;
   --typeface-primary: 'Markazi Text', serif;
   --typeface-secondary: 'Karla', sans-serif;
 }
@@ -219,6 +220,7 @@ button:active {
 .specials-section {
   grid-area: center;
   padding-top: 103px;
+  padding-bottom: 103px;
 }
 
 .specials-section-header {
@@ -286,4 +288,42 @@ button:active {
 
 .card-footer p {
   font-weight: 700;
+}
+
+.testimonials-section {
+  background-color: var(--highlight-2);
+}
+
+.testimonials {
+  grid-area: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 114px 0 174px;
+}
+
+.testimonials h1 {
+  color: var(--secondary-2);
+  margin-bottom: 56px;
+}
+
+.testimonials-deck {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.testimonial-card {
+  width: 200px;
+  height: 180px;
+  background-color: var(--highlight-1);
+  border-radius: 16px;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0 20px 20px;
 }
