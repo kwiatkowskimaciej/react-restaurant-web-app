@@ -8,11 +8,11 @@ const Footer = () => {
         alt="Little Lemon logo"
         width={159}
       />
-      <div>
+      <div id="d-nav">
         <h3>Doormat navigation</h3>
         <Nav />
       </div>
-      <div>
+      <div id="contact">
         <h3>Contact</h3>
         <ul>
           <li>Address</li>
@@ -20,7 +20,7 @@ const Footer = () => {
           <li>Email</li>
         </ul>
       </div>
-      <div>
+      <div id="social">
         <h3>Social media links</h3>
         <ul>
           <li>Facebook</li>
