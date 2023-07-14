@@ -15,17 +15,30 @@ const Footer = () => {
       <div id="contact">
         <h3>Contact</h3>
         <ul>
-          <li>Address</li>
-          <li>Phone number</li>
-          <li>Email</li>
+          <li>
+            444 Michigan Ave <br />
+            Chicago, IL
+          </li>
+          <li>
+            +1 123-456-7890
+          </li>
+          <li>
+            little@lemon.com
+          </li>
         </ul>
       </div>
       <div id="social">
         <h3>Social media links</h3>
         <ul>
-          <li>Facebook</li>
-          <li>Instagram</li>
-          <li>Tik tok</li>
+          <li>
+            <a href="https://www.facebook.com"><i className="fa-brands fa-facebook"></i> Facebook</a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com"><i className="fa-brands fa-instagram"></i> Instagram</a>
+          </li>
+          <li>
+            <a href="https://www.tiktok.com"><i className="fa-brands fa-tiktok"></i> TikTok</a>
+          </li>
         </ul>
       </div>
     </footer>
