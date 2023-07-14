@@ -1,4 +1,12 @@
+import { useNavigate } from 'react-router-dom';
+
 const LandingSection = () => {
+  let navigate = useNavigate();
+  const routeChange = () => {
+    let path = 'reservations';
+    navigate(path);
+  };
+
   return (
     <section className="landing-section">
       <div className="container">
@@ -10,7 +18,7 @@ const LandingSection = () => {
               We are family owned Mediterranean restaurant, focused on
               traditional recipies served with a modern twist.
             </p>
-            <button>Reserve a table</button>
+            <button onClick={routeChange}>Reserve a table</button>
           </div>
           <div className="hero-image">
             <img
