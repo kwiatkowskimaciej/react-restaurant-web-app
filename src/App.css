@@ -66,6 +66,10 @@ header img {
   align-self: center;
 }
 
+.menu-icon {
+  display: none;
+}
+
 header nav {
   grid-area: nav;
   align-self: center;
