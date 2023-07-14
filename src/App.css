@@ -176,21 +176,21 @@ footer a:hover {
   justify-content: space-between;
 }
 
-.lead {
+.hero-text {
   align-self: flex-start;
 }
 
-.lead h1, .about h1 {
+.hero-text h1, .about h1 {
   color: var(--primary-2);
   margin-top: 35px;
 }
 
-.lead h2, .about h2 {
+.hero-text h2, .about h2 {
   color: var(--highlight-1);
   margin-top: -20px;
 }
 
-.lead p {
+.hero-text p {
   max-width: 250px;
   margin: 20px 0;
   color: var(--highlight-1);
@@ -260,6 +260,7 @@ button:active {
 .card-image {
   width: 280px;
   height: 200px;
+  overflow: hidden;
 }
 
 .card-image img {

@@ -1,3 +1,29 @@
+import Card from './Card';
+
+const specials = [
+  {
+    title: 'Greek Salad',
+    price: 12.99,
+    description:
+      'The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons.',
+    getImageSrc: () => require('../images/greek_salad.jpg'),
+  },
+  {
+    title: 'Bruschetta',
+    price: 12.99,
+    description:
+      'Our Bruschetta is made from grilled bread that has been smeared with garlic and seasoned with salt and olive oil.',
+    getImageSrc: () => require('../images/bruchetta.png'),
+  },
+  {
+    title: 'Lemon Dessert',
+    price: 12.99,
+    description:
+      'This comes straight from grandma’s recipie book, every last ingredient has been sourced and is as authentic as can be imagined.',
+    getImageSrc: () => require('../images/lemon dessert.jpg'),
+  },
+];
+
 const SpecialsSection = () => {
   return (
     <section>
@@ -8,74 +34,15 @@ const SpecialsSection = () => {
             <button>Online Menu</button>
           </div>
           <div className="deck">
-            <div className="card">
-              <div className="card-image">
-                <img
-                  src={require('../images/greek_salad.jpg')}
-                  alt="Greek salad"
-                  width={'300px'}
-                />
-              </div>
-              <div className="card-header">
-                <h3>Greek Salad</h3>
-                <p>$ 12.99</p>
-              </div>
-              <div className="card-body">
-                <p>
-                  The famous greek salad of crispy lettuce, peppers, olives and
-                  our Chicago style feta cheese, garnished with crunchy garlic
-                  and rosemary croutons.
-                </p>
-              </div>
-              <div className="card-footer">
-                <p>Order to delivery</p>
-                <span className="material-icons">delivery_dining</span>
-              </div>
-            </div>
-            <div className="card">
-              <img
-                src={require('../images/greek_salad.jpg')}
-                alt="Greek salad"
-                width={'300px'}
+            {specials.map((special) => (
+              <Card
+                key={special.title}
+                title={special.title}
+                price={special.price}
+                description={special.description}
+                imgSrc={special.getImageSrc()}
               />
-              <div className="card-header">
-                <h3>Greek Salad</h3>
-                <p>$ 12.99</p>
-              </div>
-              <div className="card-body">
-                <p>
-                  The famous greek salad of crispy lettuce, peppers, olives and
-                  our Chicago style feta cheese, garnished with crunchy garlic
-                  and rosemary croutons.
-                </p>
-              </div>
-              <div className="card-footer">
-                <p>Order to delivery</p>
-                <span className="material-icons">delivery_dining</span>
-              </div>
-            </div>
-            <div className="card">
-              <img
-                src={require('../images/greek_salad.jpg')}
-                alt="Greek salad"
-                width={'300px'}
-              />
-              <div className="card-header">
-                <h3>Greek Salad</h3>
-                <p>$ 12.99</p>
-              </div>
-              <div className="card-body">
-                <p>
-                  The famous greek salad of crispy lettuce, peppers, olives and
-                  our Chicago style feta cheese, garnished with crunchy garlic
-                  and rosemary croutons.
-                </p>
-              </div>
-              <div className="card-footer">
-                <p>Order to delivery</p>
-                <span className="material-icons">delivery_dining</span>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>
