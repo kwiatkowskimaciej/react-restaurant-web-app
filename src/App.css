@@ -229,7 +229,7 @@ button:active {
   color: var(--highlight-1);
 }
 
-.hero .hero-image {
+.hero-image {
   align-self: flex-end;
   width: 420px;
   height: 397px;
@@ -238,6 +238,7 @@ button:active {
 
 .hero-image img {
   margin-top: 30px;
+  width: 420px;
   height: 420px;
   object-fit: cover;
   border-radius: 16px;
@@ -264,14 +265,13 @@ button:active {
 }
 
 .card {
-  width: 280px;
+  width: 30%;
   background-color: var(--highlight-1);
   border-radius: 16px;
   overflow: hidden;
 }
 
 .card-image {
-  width: 280px;
   height: 200px;
   overflow: hidden;
 }
@@ -289,12 +289,12 @@ button:active {
 }
 
 .card-header h3 {
-  margin: 20px 0 20px 30px;
+  margin: 1vw 0 1vw 1.5vw;
   padding: 0;
 }
 
 .card-header p {
-  margin-right: 30px;
+  margin-right: 1.5vw;
   text-align: right;
   font-family: var(--typeface-secondary);
   font-size: 18px;
@@ -303,7 +303,7 @@ button:active {
 }
 
 .card-body {
-  margin: 0 30px;
+  margin: 0 1.5vw;
   color: var(--primary-1);
 }
 
@@ -311,7 +311,7 @@ button:active {
   display: flex;
   align-items: center;
   gap: 5px;
-  margin: 20px 30px 20px;
+  margin: 1vw 1.5vw 1vw;
 }
 
 .card-footer p {
@@ -336,8 +336,8 @@ button:active {
 }
 
 .testimonial-card {
-  width: 200px;
-  height: 180px;
+  width: 23%;
+  height: 100%;
   background-color: var(--highlight-1);
   border-radius: 16px;
 }

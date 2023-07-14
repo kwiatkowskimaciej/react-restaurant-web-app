@@ -1,0 +1,23 @@
+@media (max-width: 1239px) {
+  header {
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-areas: '. logo logo . nav nav nav nav nav .';
+  }
+
+  footer {
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-areas: '. logo logo d-nav d-nav contact contact social social .';
+  }
+
+  .container {
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-areas: '. center center center center center center center center .';
+  }
+
+  .about-image img {
+    width: 24vw;
+    height: 340px;
+    object-fit: cover;
+    border-radius: 16px;
+  }
+}
