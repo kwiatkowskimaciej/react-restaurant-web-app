@@ -245,6 +245,7 @@ button:active {
 }
 
 .deck {
+  width: 100%;
   margin-top: 45px;
   display: flex;
   justify-content: space-between;
@@ -319,14 +320,7 @@ button:active {
 
 .testimonials h1 {
   color: var(--secondary-2);
-  margin-bottom: 56px;
-}
-
-.testimonials-deck {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  margin-bottom: 11px;
 }
 
 .testimonial-card {
@@ -357,6 +351,7 @@ button:active {
 
 .comment {
   margin-left: 20px;
+  margin-bottom: 10px;
 }
 
 .about-section {
