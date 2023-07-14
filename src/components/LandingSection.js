@@ -3,7 +3,7 @@ const LandingSection = () => {
     <section className="landing-section">
       <div className="container">
         <div className="hero">
-          <div className="lead">
+          <div className="hero-text">
             <h1>Little Lemon</h1>
             <h2>Chicago</h2>
             <p>

@@ -1,7 +1,7 @@
 import LandingSection from './LandingSection';
 import SpecialsSection from './SpecialsSection';
 import TestimonialsSection from './TestimonialsSection';
-import AboutSection from './AboutSection'
+import AboutSection from './AboutSection';
 
 const Main = () => {
   return (
