@@ -90,12 +90,21 @@
     width: 100%;
     margin-top: 45px;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  .card {
+    width: 48%;
+    background-color: var(--highlight-1);
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 10px;
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
     h1 {
         font-size: 40px;
     }
@@ -105,6 +114,6 @@
     }
 
     .hero {
-        margin: 10px 0 12px;
+        margin: 10px 0 15px;
     }
 }
