@@ -6,11 +6,11 @@ const TestimonialsSection = () => {
           <h1>Testimonials</h1>
           <div className="testimonials-deck">
             <div className="testimonial-card">
-              <span className="rating">★★★★★</span>
+              <div className="rating">★★★★★</div>
               <div className="profile">
                 <div className="avatar">
                   <img
-                    src={require('../images/footer_logo.png')}
+                    src={require('../images/avatar.png')}
                     alt="Avatar"
                     width={'48px'}
                   />
@@ -21,9 +21,54 @@ const TestimonialsSection = () => {
                 <p>Amazing food!</p>
               </div>
             </div>
-            <div className="testimonial-card"></div>
-            <div className="testimonial-card"></div>
-            <div className="testimonial-card"></div>
+            <div className="testimonial-card">
+              <div className="rating">★★★★★</div>
+              <div className="profile">
+                <div className="avatar">
+                  <img
+                    src={require('../images/avatar.png')}
+                    alt="Avatar"
+                    width={'48px'}
+                  />
+                </div>
+                <p>Bob</p>
+              </div>
+              <div className="comment">
+                <p>Amazing food!</p>
+              </div>
+            </div>
+            <div className="testimonial-card">
+              <div className="rating">★★★★★</div>
+              <div className="profile">
+                <div className="avatar">
+                  <img
+                    src={require('../images/avatar.png')}
+                    alt="Avatar"
+                    width={'48px'}
+                  />
+                </div>
+                <p>Bob</p>
+              </div>
+              <div className="comment">
+                <p>Amazing food!</p>
+              </div>
+            </div>
+            <div className="testimonial-card">
+              <div className="rating">★★★★★</div>
+              <div className="profile">
+                <div className="avatar">
+                  <img
+                    src={require('../images/avatar.png')}
+                    alt="Avatar"
+                    width={'48px'}
+                  />
+                </div>
+                <p>Bob</p>
+              </div>
+              <div className="comment">
+                <p>Amazing food!</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

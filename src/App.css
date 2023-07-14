@@ -115,12 +115,14 @@ header a:focus::after {
 footer {
   margin: 0 auto;
   max-width: 1440px;
+  color: var(--highlight-2);
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-column-gap: 20px;
-  padding: 30px 0;
+  padding: 3rem 0;
   grid-template-areas: '. . logo logo d-nav d-nav contact contact social social . .';
 }
+
 
 footer img {
   grid-area: logo;
@@ -128,6 +130,18 @@ footer img {
 
 footer h3 {
   padding: 30px 0 20px;
+}
+
+footer a:link {
+  color: var(--highlight-2);
+}
+
+footer a:visited {
+  color: var(--highlight-2);
+}
+
+footer a:hover {
+  text-decoration: underline;
 }
 
 #d-nav {
@@ -166,12 +180,12 @@ footer h3 {
   align-self: flex-start;
 }
 
-.lead h1 {
+.lead h1, .about h1 {
   color: var(--primary-2);
   margin-top: 35px;
 }
 
-.lead h2 {
+.lead h2, .about h2 {
   color: var(--highlight-1);
   margin-top: -20px;
 }
@@ -199,7 +213,7 @@ button {
 }
 
 button:active {
-  background-color: var(--primary-1);
+  background-color: var(--highlight-2);
   color: var(--highlight-1);
 }
 
@@ -321,9 +335,66 @@ button:active {
   border-radius: 16px;
 }
 
+.rating {
+  margin: 30px 0 10px 20px;
+  color: var(--secondary-1);
+}
+
 .profile {
   display: flex;
   align-items: center;
   gap: 10px;
   margin: 10px 0 20px 20px;
+}
+
+.avatar {
+  width: 48px;
+  height: 48px;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.comment {
+  margin-left: 20px;
+}
+
+.about-section {
+  background-color: var(--primary-1);
+}
+
+.about {
+  grid-area: center;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3rem;
+}
+
+.about-text h1 {
+  margin-top: 0;
+}
+
+.about-text p {
+  color: var(--highlight-1);
+  max-width: 300px;
+  margin-top: 10px;
+}
+
+.about-image {
+  display: flex;
+}
+
+.about-image img {
+  width: 18vw;
+  height: 340px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.about-image img:nth-child(odd) {
+  margin: 10rem 0 3rem;
+}
+
+.about-image img:nth-child(even) {
+  object-position: 82%;
+  margin-left: -3rem;
 }
