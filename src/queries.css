@@ -1,3 +1,15 @@
+:root {
+  --primary-1: #495e57;
+  --primary-2: #f4ce14;
+  --highlight-1: #edefee;
+  --highlight-2: #333333;
+  --secondary-1: #ee9972;
+  --secondary-2: #fbdabb;
+  --typeface-primary: 'Markazi Text', serif;
+  --typeface-secondary: 'Karla', sans-serif;
+}
+
+
 @media (max-width: 1239px) {
   header {
     grid-template-columns: repeat(10, 1fr);
@@ -39,6 +51,7 @@
     top: 114px;
     right: 0;
     height: 0;
+    border-radius: 0;
     background-color: #fff;
     width: 100%;
     transition: all 0.3s ease-in;
@@ -47,6 +60,7 @@
 
   .nav-elements.active {
     height: 282px;
+    border-radius: 0 0 16px 16px;
   }
 
   .nav-elements ul {
@@ -105,15 +119,259 @@
 }
 
 @media (max-width: 800px) {
-    h1 {
-        font-size: 40px;
-    }
+  h1 {
+    font-size: 40px;
+  }
 
-    h2 {
-        font-size: 32px;
-    }
+  h2 {
+    font-size: 32px;
+  }
 
-    .hero {
-        margin: 10px 0 15px;
-    }
+  .hero {
+    margin: 10px 0 15px;
+  }
+}
+
+@media (max-width: 599px) {
+  h1 {
+    font-family: var(--typeface-primary);
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 500;
+    text-transform: capitalize;
+  }
+
+  h2 {
+    font-family: var(--typeface-primary);
+    font-size: 44px;
+    font-style: normal;
+    font-weight: 400;
+    text-transform: capitalize;
+    margin-top: -16px;
+  }
+
+  button {
+    width: auto;
+    padding: 0 12px;
+    height: 40px;
+  }
+
+  header {
+    margin: 16px;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 16px;
+    grid-template-areas: 'logo logo . menu';
+  }
+
+  header img {
+    grid-area: logo;
+    width: 100%;
+  }
+
+  header nav {
+    grid-area: menu;
+    align-self: center;
+    justify-self: end;
+  }
+
+  .nav-elements {
+    top: 65px;
+  }
+
+  .container {
+    margin: 0 16px;
+    padding: 16px 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 16px;
+    grid-template-areas: 'center';
+  }
+
+  .hero {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 16px;
+    grid-template-areas: 'h h h h'
+                         't t i i';
+  }
+
+  .hero-title {
+    grid-area: h;
+  }
+
+  .hero-title h1 {
+    color: var(--primary-2);
+  }
+
+  .hero-title h2 {
+    color: var(--highlight-1);
+  }
+
+  .hero-lead {
+    grid-area: t;
+    margin: 16px 0;
+  }
+
+  .hero-lead p {
+    margin-bottom: 32px;
+    color: var(--highlight-1);
+  }
+
+  .hero-lead button {
+    margin-bottom: 0;
+  }
+
+  .hero-image {
+    margin: 0;
+    grid-area: i;
+    justify-self: end;
+    align-self: start;
+    width: 80%;
+    height: 80%;
+  }
+
+  .hero-image img {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .specials-section {
+    margin: 0;
+    padding: 0;
+  }
+
+  .specials-section-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .specials-section-header h1 {
+    font-size: 40px;
+  }
+
+  .deck {
+    margin-top: 32px;
+  }
+
+  .card {
+    width: 100%;
+    border: 1px solid var(--highlight-1);
+    margin-bottom: 16px;
+  }
+
+  .card-image {
+    width: 100%;
+  }
+
+  .card-body{
+    padding: 16px;
+  }
+
+  .card-header h3 {
+    margin: 0;
+  }
+
+  .card-header p {
+    margin: 0;
+  }
+
+  .card-description {
+    margin: 0;
+    padding: 16px 0;
+  }
+
+  .card-footer {
+    gap: 8px;
+    margin: 0;
+  }
+
+  .testimonials {
+    margin: 0;
+  }
+
+  .testimonials .deck {
+    gap: 8px;
+    padding-bottom: 32px;
+  }
+
+  .testimonials h1 {
+    margin-bottom: 0;
+    font-size: 44px;
+  }
+
+  .testimonial-card {
+    flex-basis: calc(50% - 4px);
+    flex-grow: 1;
+    padding: 16px;
+  }
+
+  .rating {
+    margin: 0;
+    margin-bottom: 8px;
+  }
+
+  .profile {
+    margin: 0;
+    margin-bottom: 8px;
+  }
+
+  .avatar {
+    margin: 0;
+  }
+
+  .comment {
+    margin: 0;
+  }
+
+  .about {
+    margin: 0;
+    margin-bottom: 16px;
+    display: block;
+  }
+
+  .about-text h1 {
+    font-size: 44px;
+    margin-top: 0;
+  }
+
+  .about-text h2 {
+    font-size: 36px;
+  }
+
+  .about-text p {
+    max-width: calc(100% - 16px);
+    margin: 16px 0 16px;
+  }
+
+  .about-image {
+    justify-content: space-between;
+  }
+
+  .about-image img {
+    height: 300px;
+    object-fit: cover;
+    border-radius: 16px;
+    transition: all 0.3s ease-in;
+  }
+
+  .about-image .show-full {
+    width: calc(75% - 4px);
+  }
+
+  .about-image .false {
+    width: calc(25% - 4px);
+    object-position: 50%;
+  }
+
+  .about-image img:nth-child(odd) {
+    margin: 0;
+    object-position: 30%;
+  }
+
+  .about-image img:nth-child(even) {
+    object-position: 90%;
+  }
 }

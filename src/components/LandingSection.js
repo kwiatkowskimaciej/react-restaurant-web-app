@@ -11,9 +11,11 @@ const LandingSection = () => {
     <section className="landing-section">
       <div className="container">
         <div className="hero">
-          <div className="hero-text">
+          <div className="hero-title">
             <h1>Little Lemon</h1>
             <h2>Chicago</h2>
+          </div>
+          <div className="hero-lead">
             <p>
               We are family owned Mediterranean restaurant, focused on
               traditional recipies served with a modern twist.

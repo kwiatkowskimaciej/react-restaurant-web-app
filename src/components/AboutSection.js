@@ -1,4 +1,11 @@
+import { useState } from 'react';
+
 const AboutSection = () => {
+  const [showImage, setShowImage] = useState(false)
+
+  const handleClick = () => {
+    setShowImage(!showImage)
+  }
   return (
     <section className="about-section">
       <div className="container">
@@ -20,14 +27,18 @@ const AboutSection = () => {
           </div>
           <div className="about-image">
             <img
+              className={`${!showImage && 'show-full'}`}
               src={require('../images/restaurant.jpg')}
               alt="Four bruschettas on a black wooden board"
               width={'420px'}
+              onClick={handleClick}
             />
             <img
+              className={`${showImage && 'show-full'}`}
               src={require('../images/mario_and_adrian.jpg')}
               alt="Four bruschettas on a black wooden board"
               width={'420px'}
+              onClick={handleClick}
             />
           </div>
         </div>

@@ -26,7 +26,7 @@ const testimonials = [
     userId: 4,
     rating: "★★★★★",
     name: 'Robert',
-    comment: 'Delicious food, highly recommended.',
+    comment: 'Highly recommended.',
     getAvatarSrc: () => require('../images/avatar_robert.png'),
   },
 ];
