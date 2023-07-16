@@ -24,7 +24,7 @@ const ReservationsPage = () => {
   return (
     <React.Fragment>
       <Header />
-      <h1>Reservation Page</h1>
+      <h1>Reservations Page</h1>
       <ReservationForm
         availableTimes={availableTimes}
         updateTimes={updateTimes}
