@@ -14,7 +14,7 @@ const initializeTimes = () => {
   return '';
 };
 
-const ReservationPage = () => {
+const ReservationsPage = () => {
   const [availableTimes, dispatch] = useReducer(reducer, initializeTimes);
 
   const updateTimes = (times) => {
@@ -24,7 +24,7 @@ const ReservationPage = () => {
   return (
     <React.Fragment>
       <Header />
-      <h1>ReservationPage</h1>
+      <h1>Reservation Page</h1>
       <ReservationForm
         availableTimes={availableTimes}
         updateTimes={updateTimes}
@@ -33,4 +33,4 @@ const ReservationPage = () => {
   );
 };
 
-export default ReservationPage;
+export default ReservationsPage;
