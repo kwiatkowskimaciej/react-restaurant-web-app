@@ -141,7 +141,7 @@ footer h3 {
 }
 
 footer a {
-  margin-bottom: 8px;
+  /* margin-bottom: 8px; */
 }
 
 footer a:link {
@@ -164,7 +164,7 @@ footer a:hover {
   grid-area: contact;
 }
 
-#contact li {
+footer li {
   margin-bottom: 8px;
 }
 

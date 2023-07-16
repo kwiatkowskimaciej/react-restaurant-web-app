@@ -1,14 +1,14 @@
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 
-const Nav = () => {
+const Nav = (props) => {
   const [showNavbar, setShowNavbar] = useState(false);
 
   const handleShowNavbar = () => {
     setShowNavbar(!showNavbar);
   };
   return (
-    <nav>
+    <nav className={props.className}>
       <div className="menu-icon" onClick={handleShowNavbar}>
         {showNavbar ? <span className="material-symbols-outlined">close</span> : <span className="material-symbols-outlined">menu</span>}
       </div>

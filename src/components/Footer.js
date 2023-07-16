@@ -10,7 +10,7 @@ const Footer = () => {
       />
       <div id="d-nav">
         <h3>Doormat navigation</h3>
-        <Nav />
+        <Nav className="footer-nav"/>
       </div>
       <div id="contact">
         <h3>Contact</h3>
@@ -31,13 +31,13 @@ const Footer = () => {
         <h3>Social media links</h3>
         <ul>
           <li>
-            <a href="https://www.facebook.com"><i className="fa-brands fa-facebook"></i> Facebook</a>
+            <a href="https://www.facebook.com"><i className="fa-brands fa-facebook"></i>Facebook</a>
           </li>
           <li>
-            <a href="https://www.instagram.com"><i className="fa-brands fa-instagram"></i> Instagram</a>
+            <a href="https://www.instagram.com"><i className="fa-brands fa-instagram"></i>Instagram</a>
           </li>
           <li>
-            <a href="https://www.tiktok.com"><i className="fa-brands fa-tiktok"></i> TikTok</a>
+            <a href="https://www.tiktok.com"><i className="fa-brands fa-tiktok"></i>TikTok</a>
           </li>
         </ul>
       </div>

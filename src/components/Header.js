@@ -8,7 +8,7 @@ const Header = () => {
         alt="Little Lemon logo"
         width={200}
       />
-      <Nav />
+      <Nav className="header-nav"/>
     </header>
   );
 };
