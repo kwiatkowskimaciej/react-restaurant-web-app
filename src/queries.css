@@ -193,6 +193,7 @@
   .hero {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto 1fr;
     column-gap: 16px;
     grid-template-areas: 'h h h h'
                          't t i i';
@@ -229,8 +230,8 @@
     grid-area: i;
     justify-self: end;
     align-self: start;
-    width: 80%;
-    height: 80%;
+    width: auto;
+    height: 200px;
   }
 
   .hero-image img {
