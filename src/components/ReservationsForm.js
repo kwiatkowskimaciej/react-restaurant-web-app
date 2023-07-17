@@ -1,12 +1,26 @@
 import { useState } from 'react';
 
 const ReservationForm = (props) => {
-  const [resDate, setResDate] = useState('');
-  const [guestsNumber, setGuestsNumber] = useState(null);
-  const [occasion, setOccasion] = useState('');
+  const [resDate, setResDate] = useState(new Date());
+  const [guestsNumber, setGuestsNumber] = useState(1);
+  const [occasion, setOccasion] = useState('Birthday');
+  const [formData, setFormData] = useState({
+    date: '',
+    time: '',
+    numberOfGuests: null,
+    occasion: 'Birthday',
+  });
 
   const handleSubmit = (e) => {
+    setFormData({
+      ...formData,
+      date: resDate,
+      time: props.selectedTime,
+      numberOfGuests: guestsNumber,
+      occasion: occasion,
+    });
     e.preventDefault();
+    props.submitForm(formData);
   };
 
   return (

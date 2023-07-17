@@ -1,7 +1,8 @@
 import React, { useEffect, useReducer, useState } from 'react';
 import Header from './Header';
 import ReservationForm from './ReservationsForm';
-import { fetchAPI } from '../reservationsAPI';
+import { fetchAPI, submitAPI } from '../reservationsAPI';
+import { useNavigate } from 'react-router-dom';
 
 export const reducer = (state, action) => {
   if (action.type === 'UPDATE_TIMES') {
@@ -15,6 +16,7 @@ const ReservationsPage = () => {
   const [availableTimes, dispatch] = useReducer(reducer, []);
   const [selectedTime, setSelectedTime] = useState('');
   const [initializing, setInitializing] = useState(true);
+  const navigate = useNavigate()
 
   useEffect(() => {
     const initializeTimes = async () => {
@@ -37,6 +39,13 @@ const ReservationsPage = () => {
     return <div>Loading...</div>
   }
 
+  const submitForm = async (formData) => {
+    const success = await submitAPI(formData);
+    if (success) {
+      navigate('booking-confirmed')
+    }
+  }
+
   return (
     <React.Fragment>
       <Header />
@@ -46,6 +55,7 @@ const ReservationsPage = () => {
         updateTimes={updateTimes}
         selectedTime={selectedTime}
         setSelectedTime={setSelectedTime}
+        submitForm={submitForm}
       />
     </React.Fragment>
   );
