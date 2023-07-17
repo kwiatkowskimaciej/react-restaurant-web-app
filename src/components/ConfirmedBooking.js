@@ -1,5 +1,16 @@
-const ConfirmedBooking = () => {
-  return <h3>Booking has been confirmed!</h3>
-}
+import { useLocation } from 'react-router-dom';
+import Header from './Header';
 
-export default ConfirmedBooking
+const ConfirmedBooking = () => {
+  const location = useLocation();
+  const formData = location.state;
+  return (
+    <div>
+      <Header />
+      <h3>Booking has been confirmed!</h3>
+      <p>{formData.date}</p>
+    </div>
+  );
+};
+
+export default ConfirmedBooking;

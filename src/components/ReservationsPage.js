@@ -42,7 +42,7 @@ const ReservationsPage = () => {
   const submitForm = async (formData) => {
     const success = await submitAPI(formData);
     if (success) {
-      navigate('booking-confirmed')
+      navigate('booking-confirmed', {state: formData})
     }
   }
 
