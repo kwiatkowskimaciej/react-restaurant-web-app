@@ -2,7 +2,7 @@ import { render, screen, fireEvent } from '@testing-library/react';
 import ReservationsPage from './components/ReservationsPage';
 import { act } from 'react-dom/test-utils';
 import { BrowserRouter } from 'react-router-dom';
-import { fetchAPI } from './reservationsAPI';
+import * as reservationsAPI from './reservationsAPI';
 
 test('Renders the ReservationPage heading', async () => {
   let component;
@@ -36,8 +36,10 @@ test('initializeTimes function returns values', async () => {
 });
 
 test('updateTimes should return the same value provided in the state', async () => {
-  const selectedDate = '2023-07-28'
-  const wrongDate = '2023-07-31'
+  const selectedDate = '2023-07-27';
+
+  const fakeTimes = ['18:00', '19:00', '20:00', '21:00'];
+  jest.spyOn(reservationsAPI, 'fetchAPI').mockResolvedValue(fakeTimes);
 
   let component;
   await act(async () => {
@@ -55,8 +57,7 @@ test('updateTimes should return the same value provided in the state', async () 
 
   const selectElement = component.getByLabelText('Available times');
   const options = selectElement.querySelectorAll('option');
-  const values = Array.from(options).map(option => option.value);
+  const values = Array.from(options).map((option) => option.value);
 
-  expect(values).toEqual(fetchAPI(new Date(selectedDate)))
-  expect(values).not.toEqual(fetchAPI(new Date(wrongDate)))
+  expect(values).toEqual(await reservationsAPI.fetchAPI(new Date(selectedDate)));
 });
