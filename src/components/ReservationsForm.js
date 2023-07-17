@@ -11,27 +11,29 @@ const ReservationForm = (props) => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <label for="res-date">Choose date</label>
+      <label htmlFor="res-date">Choose date</label>
       <input
         type="date"
         id="res-date"
         value={resDate}
-        onChange={(e) => setResDate(e.target.value)}
+        onChange={(e) => {
+          setResDate(e.target.value);
+          props.updateTimes(e.target.value);
+        }}
       />
-      <label for="available-times">Available times</label>
+      <label htmlFor="available-times">Available times</label>
       <select
         id="available-times"
-        value={props.availableTimes}
-        onChange={(e) => props.updateTimes(e.target.value)}
+        value={props.selectedTime}
+        onChange={(e) => props.setSelectedTime(e.target.value)}
       >
-        <option>17:00</option>
-        <option>18:00</option>
-        <option>19:00</option>
-        <option>20:00</option>
-        <option>21:00</option>
-        <option>22:00</option>
+        {props.availableTimes.map((time) => (
+          <option key={time} value={time}>
+            {time}
+          </option>
+        ))}
       </select>
-      <label for="guests">Number of guests</label>
+      <label htmlFor="guests">Number of guests</label>
       <input
         type="number"
         placeholder="1"
@@ -41,7 +43,7 @@ const ReservationForm = (props) => {
         value={guestsNumber}
         onChange={(e) => setGuestsNumber(e.target.value)}
       />
-      <label for="occasion">Occasion</label>
+      <label htmlFor="occasion">Occasion</label>
       <select
         id="occasion"
         value={occasion}
