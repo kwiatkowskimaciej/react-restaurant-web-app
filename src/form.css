@@ -53,6 +53,7 @@ form {
 
 form button {
   height: 40px;
+  margin-bottom: 32px;
 }
 
 input,
@@ -128,11 +129,13 @@ input[type='radio']:after {
   top: -4px;
   left: -4px;
   position: relative;
-  background-color: var(--highlight-1);
+  background-image: url('./images/check_circle_FILL0_wght400_GRAD-25_opsz24.svg');
+  background-position: -4px -4px;
+  background-color: #fff;
   content: '';
   display: inline-block;
   visibility: visible;
-  border: 2px solid var(--primary-1);
+  border: 1.5px solid var(--primary-1);
 }
 
 input[type='radio']:checked:after {
@@ -142,7 +145,8 @@ input[type='radio']:checked:after {
   top: -4px;
   left: -4px;
   position: relative;
-  background-color: var(--primary-1);
+  background-image: url('./images/check_circle_FILL1_wght400_GRAD-25_opsz24.svg');
+  background-color: #fff;
   content: '';
   display: inline-block;
   visibility: visible;
@@ -177,7 +181,17 @@ textarea {
   }
 
   form button {
-    margin: 16px 0;
+    margin: 16px 0 32px;
+  }
+
+  #reservation-page-title {
+    font-size: 64px;
+    margin-bottom: 0px;
+  }
+
+  #reservation-page-subtitle {
+    font-size: 40px;
+    margin: 0 16px;
   }
 }
 
@@ -191,18 +205,16 @@ textarea {
     float: right;
   }
 
-  .page-title h1 {
-    font-size: 64px;
-    margin-bottom: 0px;
-  }
-
-  .page-title h2 {
-    font-size: 40px;
-    margin: 0 16px;
+  .page-title {
+    margin: 8vh auto;
   }
 }
 
 @media (min-width: 1240px) {
+  .page-title {
+    margin: 10vh auto;
+  }
+
   .reservation-details {
     display: grid;
     margin: 0 auto;
@@ -260,5 +272,9 @@ textarea {
 
   .last-name {
     grid-area: l;
+  }
+
+  form button {
+    margin: 16px 0 64px;
   }
 }

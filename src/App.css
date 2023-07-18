@@ -121,6 +121,7 @@ header a:focus::after {
 }
 
 footer {
+  background-color: var(--highlight-1);
   margin: 0 auto;
   max-width: 1440px;
   color: var(--highlight-2);
@@ -371,7 +372,7 @@ button:active {
 
 .comment {
   margin-left: 20px;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 
 .about-section {

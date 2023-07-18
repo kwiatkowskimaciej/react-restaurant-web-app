@@ -37,7 +37,7 @@ const TestimonialsSection = () => {
     <section className="testimonials-section">
       <div className="container">
         <div className="testimonials">
-          <h2>Testimonials</h2>
+          <h1>Testimonials</h1>
           <div className="deck" role="list">
             {testimonials.map((testimonial) => (
               <Testimonial

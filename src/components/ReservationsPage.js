@@ -3,6 +3,7 @@ import Header from './Header';
 import ReservationForm from './ReservationsForm';
 import { fetchAPI, submitAPI } from '../reservationsAPI';
 import { useNavigate } from 'react-router-dom';
+import Footer from './Footer';
 
 export const reducer = (state, action) => {
   if (action.type === 'UPDATE_TIMES') {
@@ -53,21 +54,24 @@ const ReservationsPage = () => {
         <div className="reservation-landing">
           <div className="container">
             <div className="page-title">
-              <h1>Table Reservation</h1>
-              <h2>Book a table in your favourite restaurant</h2>
+              <h1 id="reservation-page-title">Table Reservation</h1>
+              <h2 id="reservation-page-subtitle">
+                Book a table in your favourite restaurant
+              </h2>
             </div>
           </div>
         </div>
-        <div className='container'>
-        <ReservationForm
-          availableTimes={availableTimes}
-          updateTimes={updateTimes}
-          selectedTime={selectedTime}
-          setSelectedTime={setSelectedTime}
-          submitForm={submitForm}
-        />
+        <div className="container">
+          <ReservationForm
+            availableTimes={availableTimes}
+            updateTimes={updateTimes}
+            selectedTime={selectedTime}
+            setSelectedTime={setSelectedTime}
+            submitForm={submitForm}
+          />
         </div>
       </main>
+      <Footer />
     </React.Fragment>
   );
 };

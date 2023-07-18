@@ -165,7 +165,7 @@ const ReservationForm = (props) => {
             )}
           </fieldset>
           <div>
-            <label for="comments">Comments</label>
+            <label htmlFor="comments">Comments</label>
             <textarea
               id="comments"
               name="comments"

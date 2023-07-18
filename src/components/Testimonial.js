@@ -13,7 +13,7 @@ const Testimonial = ({ rating, name, comment, avatarSrc }) => {
         <p>{name}</p>
       </div>
       <div className="comment">
-        <p>{comment}</p>
+        <p><i>{comment}</i></p>
       </div>
     </div>
   );

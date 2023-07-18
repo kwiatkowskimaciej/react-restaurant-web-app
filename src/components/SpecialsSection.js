@@ -31,7 +31,7 @@ const SpecialsSection = () => {
       <div className="container">
         <div className="specials-section">
           <div className="specials-section-header">
-            <h2>This week's specials!</h2>
+            <h1>This week's specials!</h1>
             <button>Online Menu</button>
           </div>
           <div className="deck" role="list">
