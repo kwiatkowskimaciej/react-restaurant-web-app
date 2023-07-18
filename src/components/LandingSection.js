@@ -1,9 +1,10 @@
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const LandingSection = () => {
   let navigate = useNavigate();
   const routeChange = () => {
-    let path = 'reservations';
+    let path = '/reservations';
     navigate(path);
   };
 
@@ -17,10 +18,15 @@ const LandingSection = () => {
           </div>
           <div className="hero-lead">
             <p>
-              We are family owned Mediterranean restaurant, focused on
-              traditional recipies served with a modern twist.
+              We are a family-owned Mediterranean restaurant, focused on
+              traditional recipes served with a modern twist.
             </p>
-            <button onClick={routeChange}>Reserve a table</button>
+            <button
+              onClick={routeChange}
+              aria-label="Reserve a table"
+            >
+              Reserve a table
+            </button>
           </div>
           <div className="hero-image">
             <img

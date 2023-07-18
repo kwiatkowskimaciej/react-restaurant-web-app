@@ -16,14 +16,14 @@ const ReservationsPage = () => {
   const [availableTimes, dispatch] = useReducer(reducer, []);
   const [selectedTime, setSelectedTime] = useState('');
   const [initializing, setInitializing] = useState(true);
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   useEffect(() => {
     const initializeTimes = async () => {
       const today = new Date();
       const times = await fetchAPI(today);
       dispatch({ type: 'UPDATE_TIMES', times });
-      setInitializing(false)
+      setInitializing(false);
     };
 
     initializeTimes();
@@ -36,27 +36,29 @@ const ReservationsPage = () => {
   };
 
   if (initializing) {
-    return <div>Loading...</div>
+    return <div role="status">Loading...</div>;
   }
 
   const submitForm = async (formData) => {
     const success = await submitAPI(formData);
     if (success) {
-      navigate('booking-confirmed', {state: formData})
+      navigate('booking-confirmed', { state: formData });
     }
-  }
+  };
 
   return (
     <React.Fragment>
       <Header />
-      <h1>Reservations Page</h1>
-      <ReservationForm
-        availableTimes={availableTimes}
-        updateTimes={updateTimes}
-        selectedTime={selectedTime}
-        setSelectedTime={setSelectedTime}
-        submitForm={submitForm}
-      />
+      <main>
+        <h1>Reservations Page</h1>
+        <ReservationForm
+          availableTimes={availableTimes}
+          updateTimes={updateTimes}
+          selectedTime={selectedTime}
+          setSelectedTime={setSelectedTime}
+          submitForm={submitForm}
+        />
+      </main>
     </React.Fragment>
   );
 };

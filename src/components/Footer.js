@@ -1,3 +1,4 @@
+import React from 'react';
 import Nav from './Nav';
 
 const Footer = () => {
@@ -8,22 +9,24 @@ const Footer = () => {
         alt="Little Lemon logo"
         width={159}
       />
-      <div id="d-nav">
+      <nav id="d-nav">
         <h3>Doormat navigation</h3>
-        <Nav className="footer-nav"/>
-      </div>
+        <Nav className="footer-nav" />
+      </nav>
       <div id="contact">
         <h3>Contact</h3>
         <ul>
           <li>
-            444 Michigan Ave <br />
-            Chicago, IL
+            <address>
+              444 Michigan Ave <br />
+              Chicago, IL
+            </address>
           </li>
           <li>
-            +1 123-456-7890
+            <a href="tel:+11234567890">+1 123-456-7890</a>
           </li>
           <li>
-            little@lemon.com
+            <a href="mailto:little@lemon.com">little@lemon.com</a>
           </li>
         </ul>
       </div>
@@ -31,13 +34,22 @@ const Footer = () => {
         <h3>Social media links</h3>
         <ul>
           <li>
-            <a href="https://www.facebook.com"><i className="fa-brands fa-facebook"></i>Facebook</a>
+            <a href="https://www.facebook.com">
+              <i className="fa-brands fa-facebook" aria-hidden="true"></i>
+              Facebook
+            </a>
           </li>
           <li>
-            <a href="https://www.instagram.com"><i className="fa-brands fa-instagram"></i>Instagram</a>
+            <a href="https://www.instagram.com">
+              <i className="fa-brands fa-instagram" aria-hidden="true"></i>
+              Instagram
+            </a>
           </li>
           <li>
-            <a href="https://www.tiktok.com"><i className="fa-brands fa-tiktok"></i>TikTok</a>
+            <a href="https://www.tiktok.com">
+              <i className="fa-brands fa-tiktok" aria-hidden="true"></i>
+              TikTok
+            </a>
           </li>
         </ul>
       </div>

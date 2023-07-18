@@ -1,5 +1,5 @@
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
 
 const Nav = (props) => {
   const [showNavbar, setShowNavbar] = useState(false);
@@ -7,11 +7,21 @@ const Nav = (props) => {
   const handleShowNavbar = () => {
     setShowNavbar(!showNavbar);
   };
+
   return (
     <nav className={props.className}>
-      <div className="menu-icon" onClick={handleShowNavbar}>
-        {showNavbar ? <span className="material-symbols-outlined">close</span> : <span className="material-symbols-outlined">menu</span>}
-      </div>
+      <button
+        className="menu-icon"
+        onClick={handleShowNavbar}
+        aria-label={showNavbar ? 'Close menu' : 'Open menu'}
+        aria-expanded={showNavbar}
+      >
+        {showNavbar ? (
+          <span className="material-symbols-outlined">close</span>
+        ) : (
+          <span className="material-symbols-outlined">menu</span>
+        )}
+      </button>
       <div className={`nav-elements ${showNavbar && 'active'}`}>
         <ul>
           <li>

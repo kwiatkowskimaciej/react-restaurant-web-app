@@ -1,11 +1,12 @@
 import { useState } from 'react';
 
 const AboutSection = () => {
-  const [showImage, setShowImage] = useState(false)
+  const [showImage, setShowImage] = useState(false);
 
   const handleClick = () => {
-    setShowImage(!showImage)
-  }
+    setShowImage(!showImage);
+  };
+
   return (
     <section className="about-section">
       <div className="container">
@@ -32,6 +33,8 @@ const AboutSection = () => {
               alt="Four bruschettas on a black wooden board"
               width={'420px'}
               onClick={handleClick}
+              aria-hidden={!showImage}
+              aria-label="Restaurant Image"
             />
             <img
               className={`${showImage && 'show-full'}`}
@@ -39,6 +42,8 @@ const AboutSection = () => {
               alt="Four bruschettas on a black wooden board"
               width={'420px'}
               onClick={handleClick}
+              aria-hidden={showImage}
+              aria-label="Mario and Adrian Image"
             />
           </div>
         </div>

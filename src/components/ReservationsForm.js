@@ -1,3 +1,4 @@
+import React from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 
@@ -23,20 +24,26 @@ const ReservationForm = (props) => {
   });
 
   return (
-    <form onSubmit={formik.handleSubmit}>
+    <form
+      onSubmit={formik.handleSubmit}
+      aria-labelledby="reservation-form-heading"
+    >
+      <h2 id="reservation-form-heading">Make a Reservation</h2>
       <label htmlFor="date">Choose date</label>
       <input
         type="date"
         id="date"
+        name="date"
         value={formik.values.date}
         onChange={(e) => {
           formik.handleChange(e);
           props.updateTimes(e.target.value);
         }}
         onBlur={formik.handleBlur}
+        aria-describedby="date-error"
       />
       {formik.touched.date && formik.errors.date && (
-        <div>{formik.errors.date}</div>
+        <div id="date-error">{formik.errors.date}</div>
       )}
 
       <label htmlFor="time">Available times</label>
@@ -46,6 +53,7 @@ const ReservationForm = (props) => {
         value={formik.values.time}
         onChange={formik.handleChange}
         onBlur={formik.handleBlur}
+        aria-describedby="time-error"
       >
         {props.availableTimes?.map((time) => (
           <option key={time} value={time}>
@@ -54,23 +62,26 @@ const ReservationForm = (props) => {
         ))}
       </select>
       {formik.touched.time && formik.errors.time && (
-        <div>{formik.errors.time}</div>
+        <div id="time-error">{formik.errors.time}</div>
       )}
+
       <label htmlFor="guests">Number of guests</label>
       <input
         type="number"
+        id="guests"
         name="guests"
         placeholder="1"
         min="1"
         max="10"
-        id="guests"
         value={formik.values.guests}
         onChange={formik.handleChange}
         onBlur={formik.handleBlur}
+        aria-describedby="guests-error"
       />
       {formik.touched.guests && formik.errors.guests && (
-        <div>{formik.errors.guests}</div>
+        <div id="guests-error">{formik.errors.guests}</div>
       )}
+
       <label htmlFor="occasion">Occasion</label>
       <select
         id="occasion"
@@ -79,10 +90,12 @@ const ReservationForm = (props) => {
         onChange={formik.handleChange}
         onBlur={formik.handleBlur}
       >
-        <option>Birthday</option>
-        <option>Anniversary</option>
+        <option value="">None</option>
+        <option value="birthday">Birthday</option>
+        <option value="anniversary">Anniversary</option>
       </select>
-      <input type="submit" value="Make Your reservation" />
+
+      <button type="submit">Make Your Reservation</button>
     </form>
   );
 };

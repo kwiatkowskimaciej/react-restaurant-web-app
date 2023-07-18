@@ -1,3 +1,4 @@
+import React from 'react';
 import Card from './Card';
 
 const specials = [
@@ -5,7 +6,7 @@ const specials = [
     title: 'Greek Salad',
     price: 12.99,
     description:
-      'The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons.',
+      'The famous Greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons.',
     getImageSrc: () => require('../images/greek_salad.jpg'),
   },
   {
@@ -19,8 +20,8 @@ const specials = [
     title: 'Lemon Dessert',
     price: 12.99,
     description:
-      'This comes straight from grandma’s recipie book, every last ingredient has been sourced and is as authentic as can be imagined.',
-    getImageSrc: () => require('../images/lemon dessert.jpg'),
+      'This comes straight from grandma’s recipe book, every last ingredient has been sourced and is as authentic as can be imagined.',
+    getImageSrc: () => require('../images/lemon_dessert.jpg'),
   },
 ];
 
@@ -30,10 +31,10 @@ const SpecialsSection = () => {
       <div className="container">
         <div className="specials-section">
           <div className="specials-section-header">
-            <h1>This weeks specials!</h1>
+            <h2>This week's specials!</h2>
             <button>Online Menu</button>
           </div>
-          <div className="deck">
+          <div className="deck" role="list">
             {specials.map((special) => (
               <Card
                 key={special.title}
