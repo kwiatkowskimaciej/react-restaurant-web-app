@@ -10,13 +10,13 @@
 }
 
 .reservation-landing {
-  grid-area: center;
-  background-image: url("/src/images/restaurant.jpg");
+  background-image: url('/src/images/restaurant.jpg');
   background-position: center;
   background-size: cover;
 }
 
 .page-title {
+  grid-area: center;
   text-align: center;
   display: inline-block;
   background-color: var(--primary-1);
@@ -47,7 +47,16 @@ h3.form-section-title {
   margin-bottom: 16px;
 }
 
-input, select {
+form {
+  grid-area: center;
+}
+
+form button {
+  height: 40px;
+}
+
+input,
+select {
   width: 100%;
   height: 40px;
   border-radius: 16px;
@@ -59,10 +68,11 @@ input, select {
 
 label {
   font-family: var(--typeface-secondary);
+  display: inline-block;
   font-size: 16px;
   font-weight: 800;
   text-transform: capitalize;
-  margin-bottom: 8px;
+  margin-bottom: 4px;
 }
 
 select {
@@ -82,7 +92,7 @@ form div {
   margin-bottom: 16px;
 }
 
-input[type=number]::-webkit-inner-spin-button {
+input[type='number']::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
 
@@ -92,7 +102,7 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 .invalid {
-  color:red;
+  color: red;
   border-color: red;
 }
 
@@ -106,7 +116,7 @@ fieldset {
   margin-bottom: 16px;
 }
 
-input[type="radio"] {
+input[type='radio'] {
   width: auto;
   height: auto;
 }
@@ -155,4 +165,100 @@ textarea {
   padding: 16px;
   font-size: 16px;
   font-family: var(--typeface-secondary);
+}
+
+@media (min-width: 600px) {
+  .page-title {
+    margin: 32px auto;
+  }
+
+  h3.form-section-title {
+    margin-top: 32px;
+  }
+
+  form button {
+    margin: 16px 0;
+  }
+}
+
+@media (min-width: 905px) {
+  form {
+    width: 840px;
+    justify-self: center;
+  }
+
+  form button {
+    float: right;
+  }
+
+  .page-title h1 {
+    font-size: 64px;
+    margin-bottom: 0px;
+  }
+
+  .page-title h2 {
+    font-size: 40px;
+    margin: 0 16px;
+  }
+}
+
+@media (min-width: 1240px) {
+  .reservation-details {
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: repeat(8, 1fr);
+    grid-column-gap: 20px;
+    grid-template-areas:
+      't t t t t t t t'
+      'first-col first-col first-col first-col . second-col second-col second-col';
+  }
+
+  .form-section-title {
+    grid-area: t;
+  }
+
+  h3.form-section-title {
+    margin-top: 32px;
+  }
+
+  .reservation-first-column {
+    grid-area: first-col;
+  }
+
+  .reservation-second-column {
+    grid-area: second-col;
+  }
+
+  fieldset {
+    border: none;
+    padding-left: 0;
+  }
+
+  .contact-information {
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: repeat(8, 1fr);
+    grid-column-gap: 20px;
+    grid-template-areas:
+      't t t t t t t t'
+      'n n n n l l l l'
+      'e e e e . . . .'
+      'p p p p . . . .';
+  }
+
+  .name {
+    grid-area: n;
+  }
+
+  .email {
+    grid-area: e;
+  }
+
+  .phone-number {
+    grid-area: p;
+  }
+
+  .last-name {
+    grid-area: l;
+  }
 }
