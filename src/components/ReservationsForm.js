@@ -47,7 +47,7 @@ const ReservationForm = (props) => {
         onChange={formik.handleChange}
         onBlur={formik.handleBlur}
       >
-        {props.availableTimes.map((time) => (
+        {props.availableTimes?.map((time) => (
           <option key={time} value={time}>
             {time}
           </option>

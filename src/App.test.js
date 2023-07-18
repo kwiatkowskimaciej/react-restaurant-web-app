@@ -3,6 +3,7 @@ import ReservationsPage from './components/ReservationsPage';
 import { act } from 'react-dom/test-utils';
 import { BrowserRouter } from 'react-router-dom';
 import * as reservationsAPI from './reservationsAPI';
+import ReservationForm from './components/ReservationsForm';
 
 test('Renders the ReservationPage heading', async () => {
   let component;
@@ -59,5 +60,49 @@ test('updateTimes should return the same value provided in the state', async () 
   const options = selectElement.querySelectorAll('option');
   const values = Array.from(options).map((option) => option.value);
 
-  expect(values).toEqual(await reservationsAPI.fetchAPI(new Date(selectedDate)));
+  expect(values).toEqual(
+    await reservationsAPI.fetchAPI(new Date(selectedDate))
+  );
+});
+
+test('Renders the form with correct attributes ', async () => {
+  let component;
+  await act(async () => {
+    component = render(
+      <BrowserRouter>
+        <ReservationsPage />
+      </BrowserRouter>
+    );
+  });
+
+  const dateInput = component.getByLabelText('Choose date');
+  expect(dateInput).toHaveAttribute('type', 'date');
+  expect(dateInput).toHaveAttribute('id', 'date');
+
+  const timeSelect = component.getByLabelText('Available times');
+  expect(timeSelect).toHaveAttribute('id', 'time');
+  expect(timeSelect).toHaveAttribute('name', 'time');
+
+  const guestsInput = component.getByLabelText('Number of guests');
+  expect(guestsInput).toHaveAttribute('type', 'number');
+  expect(guestsInput).toHaveAttribute('name', 'guests');
+  expect(guestsInput).toHaveAttribute('placeholder', '1');
+  expect(guestsInput).toHaveAttribute('min', '1');
+  expect(guestsInput).toHaveAttribute('max', '10');
+  expect(guestsInput).toHaveAttribute('id', 'guests');
+
+  const occasionSelect = component.getByLabelText('Occasion');
+  expect(occasionSelect).toHaveAttribute('id', 'occasion');
+  expect(occasionSelect).toHaveAttribute('name', 'occasion');
+});
+
+test('Should call updateTimes when date field changes', () => {
+  const updateTimes = jest.fn();
+  render(<ReservationForm updateTimes={updateTimes} />);
+
+  fireEvent.change(screen.getByLabelText('Choose date'), {
+    target: { value: '2023-07-19' },
+  });
+
+  expect(updateTimes).toHaveBeenCalledWith('2023-07-19');
 });
