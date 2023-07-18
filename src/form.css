@@ -1,0 +1,158 @@
+:root {
+  --primary-1: #495e57;
+  --primary-2: #f4ce14;
+  --highlight-1: #edefee;
+  --highlight-2: #333333;
+  --secondary-1: #ee9972;
+  --secondary-2: #fbdabb;
+  --typeface-primary: 'Markazi Text', serif;
+  --typeface-secondary: 'Karla', sans-serif;
+}
+
+.reservation-landing {
+  grid-area: center;
+  background-image: url("/src/images/restaurant.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.page-title {
+  text-align: center;
+  display: inline-block;
+  background-color: var(--primary-1);
+  border-radius: 16px;
+  margin: auto;
+  padding: 16px;
+}
+
+.page-title h1 {
+  font-size: 40px;
+  color: var(--primary-2);
+  margin-bottom: 16px;
+}
+
+.page-title h2 {
+  font-size: 20px;
+  color: var(--highlight-1);
+  text-transform: none;
+}
+
+h3.form-section-title {
+  font-family: var(--typeface-secondary);
+  font-size: 20px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--highlight-2);
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+input, select {
+  width: 100%;
+  height: 40px;
+  border-radius: 16px;
+  border: 1px solid var(--highlight-2);
+  font-family: var(--secondary-2);
+  font-size: 16px;
+  padding-left: 8px;
+}
+
+label {
+  font-family: var(--typeface-secondary);
+  font-size: 16px;
+  font-weight: 800;
+  text-transform: capitalize;
+  margin-bottom: 8px;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url('./images/expand_more_FILL0_wght200_GRAD0_opsz24.png');
+  background-repeat: no-repeat;
+  background-position: 98%;
+}
+
+select:active {
+  background-image: url('./images/expand_less_FILL0_wght200_GRAD0_opsz24.png');
+}
+
+form div {
+  margin-bottom: 16px;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.error {
+  color: red;
+  margin-top: 4px;
+}
+
+.invalid {
+  color:red;
+  border-color: red;
+}
+
+fieldset {
+  padding: 16px;
+  border-radius: 16px;
+  font-size: 16px;
+  font-weight: 800;
+  text-transform: capitalize;
+  font-family: var(--typeface-secondary);
+  margin-bottom: 16px;
+}
+
+input[type="radio"] {
+  width: auto;
+  height: auto;
+}
+
+input[type='radio']:after {
+  width: 16px;
+  height: 16px;
+  border-radius: 16px;
+  top: -4px;
+  left: -4px;
+  position: relative;
+  background-color: var(--highlight-1);
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid var(--primary-1);
+}
+
+input[type='radio']:checked:after {
+  width: 16px;
+  height: 16px;
+  border-radius: 16px;
+  top: -4px;
+  left: -4px;
+  position: relative;
+  background-color: var(--primary-1);
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid var(--primary-1);
+}
+
+.radio {
+  display: flex;
+  align-items: center;
+}
+
+.radio label {
+  padding-left: 8px;
+  margin: 0;
+}
+
+textarea {
+  width: 100%;
+  border-radius: 16px;
+  padding: 16px;
+  font-size: 16px;
+  font-family: var(--typeface-secondary);
+}

@@ -50,7 +50,15 @@ const ReservationsPage = () => {
     <React.Fragment>
       <Header />
       <main>
-        <h1>Reservations Page</h1>
+        <div className="reservation-landing">
+          <div className="container">
+            <div className="page-title">
+              <h1>Table Reservation</h1>
+              <h2>Book a table in your favourite restaurant</h2>
+            </div>
+          </div>
+        </div>
+        <div className='container'>
         <ReservationForm
           availableTimes={availableTimes}
           updateTimes={updateTimes}
@@ -58,6 +66,7 @@ const ReservationsPage = () => {
           setSelectedTime={setSelectedTime}
           submitForm={submitForm}
         />
+        </div>
       </main>
     </React.Fragment>
   );
