@@ -120,8 +120,18 @@ header a:focus::after {
   transform: translate3d(0, 0.2em, 0);
 }
 
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
 footer {
   background-color: var(--highlight-1);
+  width: 100%;
+  align-self: flex-end;
+  margin-top: auto;
+  bottom: 0;
 }
 
 .footer-section {

@@ -1,6 +1,7 @@
 import './App.css';
 import './queries.css';
 import './form.css'
+import './booking-confirmation.css'
 import React from 'react';
 import HomePage from './components/HomePage';
 import { Route, Routes } from 'react-router-dom';

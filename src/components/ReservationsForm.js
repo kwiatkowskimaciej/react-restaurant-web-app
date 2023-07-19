@@ -127,7 +127,7 @@ const ReservationForm = (props) => {
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
             >
-              <option value="none">None</option>
+              <option value="other">Other</option>
               <option value="birthday">Birthday</option>
               <option value="anniversary">Anniversary</option>
             </select>
