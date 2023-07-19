@@ -16,7 +16,7 @@
     grid-template-areas: '. logo logo . nav nav nav nav nav .';
   }
 
-  footer {
+  .footer-section {
     grid-template-columns: repeat(10, 1fr);
     grid-template-areas: '. logo logo d-nav d-nav contact contact social social .';
   }
@@ -382,7 +382,7 @@
     object-position: 90%;
   }
 
-  footer {
+  .footer-section {
     margin: 0;
     padding: 32px 16px;
     display: flex;
