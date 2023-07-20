@@ -32,18 +32,26 @@
   hyphens: auto;
 }
 
-/* .wrapper {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+.confirmation-card + a {
+  color: var(--highlight-2);
 }
 
-.container {
-  flex-grow: 1;
+.confirmation-card + a:hover {
+  text-decoration: underline;
 }
 
-footer {
-  margin-top: auto;
-} */
+@media (min-width: 600px) {
+  .confirmation-card + a {
+    margin-bottom: 16px;
+    text-align: right;
+  }
+}
 
-
+@media (min-width: 905px) {
+  .wrapper .container {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    max-width: 840px;
+  }
+}

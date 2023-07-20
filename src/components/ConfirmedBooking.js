@@ -1,4 +1,4 @@
-import { useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import Header from './Header';
 import Footer from './Footer';
 
@@ -58,6 +58,7 @@ const ConfirmedBooking = () => {
             </li>) : null}
           </ul>
         </div>
+        <Link to="/">Back to the home page</Link>
       </div>
       <Footer />
     </div>
