@@ -54,6 +54,7 @@ const ReservationForm = (props) => {
               type="date"
               id="date"
               name="date"
+              placeholder='Select date'
               value={formik.values.date}
               onChange={(e) => {
                 formik.handleChange(e);
@@ -81,6 +82,7 @@ const ReservationForm = (props) => {
               onBlur={formik.handleBlur}
               aria-describedby="time-error"
             >
+              <option value="" disabled selected>Select time</option>
               {props.availableTimes?.map((time) => (
                 <option key={time} value={time}>
                   {time}
@@ -104,7 +106,6 @@ const ReservationForm = (props) => {
               type="number"
               id="guests"
               name="guests"
-              placeholder="1"
               min="1"
               max="10"
               value={formik.values.guests}
@@ -183,7 +184,7 @@ const ReservationForm = (props) => {
       </div>
       <div className="contact-information">
         <h3 className="form-section-title">Contact information</h3>
-        <div className='name'>
+        <div className="name">
           <label htmlFor="name">Name*</label>
           <input
             className={
@@ -205,7 +206,7 @@ const ReservationForm = (props) => {
             </div>
           )}
         </div>
-        <div className='last-name'>
+        <div className="last-name">
           <label htmlFor="lastName">Last Name*</label>
           <input
             className={
@@ -227,7 +228,7 @@ const ReservationForm = (props) => {
             </div>
           )}
         </div>
-        <div className='email'>
+        <div className="email">
           <label htmlFor="email">Email*</label>
           <input
             className={
@@ -247,7 +248,7 @@ const ReservationForm = (props) => {
             </div>
           )}
         </div>
-        <div className='phone-number'>
+        <div className="phone-number">
           <label htmlFor="phoneNumber">Phone number</label>
           <input
             className={
