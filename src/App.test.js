@@ -1,4 +1,4 @@
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen, fireEvent, userEvent } from '@testing-library/react';
 import ReservationsPage from './components/ReservationsPage';
 import { act } from 'react-dom/test-utils';
 import { BrowserRouter } from 'react-router-dom';
@@ -14,7 +14,7 @@ test('Renders the ReservationPage heading', async () => {
       </BrowserRouter>
     );
   });
-  const title = component.getByText('Reservations Page');
+  const title = component.getByText('Table Reservation');
   expect(title).toBeInTheDocument();
 });
 
@@ -31,7 +31,7 @@ test('initializeTimes function returns values', async () => {
   const loading = component.queryByText('Loading...');
   expect(loading).not.toBeInTheDocument();
 
-  const selectElement = component.getByLabelText('Available times');
+  const selectElement = component.getByLabelText('Time*');
   const options = selectElement.querySelectorAll('option');
   expect(options.length).toBeGreaterThan(0);
 });
@@ -52,13 +52,15 @@ test('updateTimes should return the same value provided in the state', async () 
   });
 
   await act(async () => {
-    const dateInput = component.getByLabelText('Choose date');
+    const dateInput = component.getByLabelText('Date*');
     fireEvent.change(dateInput, { target: { value: selectedDate } });
   });
 
-  const selectElement = component.getByLabelText('Available times');
+  const selectElement = component.getByLabelText('Time*');
   const options = selectElement.querySelectorAll('option');
   const values = Array.from(options).map((option) => option.value);
+  //Remove placeholder
+  values.shift();
 
   expect(values).toEqual(
     await reservationsAPI.fetchAPI(new Date(selectedDate))
@@ -75,18 +77,17 @@ test('Renders the form with correct attributes ', async () => {
     );
   });
 
-  const dateInput = component.getByLabelText('Choose date');
+  const dateInput = component.getByLabelText('Date*');
   expect(dateInput).toHaveAttribute('type', 'date');
   expect(dateInput).toHaveAttribute('id', 'date');
 
-  const timeSelect = component.getByLabelText('Available times');
+  const timeSelect = component.getByLabelText('Time*');
   expect(timeSelect).toHaveAttribute('id', 'time');
   expect(timeSelect).toHaveAttribute('name', 'time');
 
-  const guestsInput = component.getByLabelText('Number of guests');
+  const guestsInput = component.getByLabelText('Number of guests*');
   expect(guestsInput).toHaveAttribute('type', 'number');
   expect(guestsInput).toHaveAttribute('name', 'guests');
-  expect(guestsInput).toHaveAttribute('placeholder', '1');
   expect(guestsInput).toHaveAttribute('min', '1');
   expect(guestsInput).toHaveAttribute('max', '10');
   expect(guestsInput).toHaveAttribute('id', 'guests');
@@ -100,7 +101,7 @@ test('Should call updateTimes when date field changes', () => {
   const updateTimes = jest.fn();
   render(<ReservationForm updateTimes={updateTimes} />);
 
-  fireEvent.change(screen.getByLabelText('Choose date'), {
+  fireEvent.change(screen.getByLabelText('Date*'), {
     target: { value: '2023-07-19' },
   });
 
