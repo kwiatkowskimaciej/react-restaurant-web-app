@@ -120,6 +120,17 @@ header a:focus::after {
   transform: translate3d(0, 0.2em, 0);
 }
 
+header a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -0.2em;
+  left: 0;
+  width: 100%;
+  height: 0.1em;
+  background-color: var(--primary-2);
+  opacity: 1;
+}
+
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -302,7 +313,7 @@ button:active {
 }
 
 .card-image img {
-  object-fit: contain;
+  object-fit: fill;
   border-radius: 16px 16px 0 0;
 }
 

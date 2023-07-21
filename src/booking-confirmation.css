@@ -14,6 +14,11 @@
   margin-bottom: 16px;
 }
 
+.wrapper h2 {
+  margin-top: -16px;
+  text-align: center;
+}
+
 .confirmation-card h3 {
   margin-bottom: 16px;
 }
@@ -47,7 +52,7 @@
   }
 }
 
-@media (min-width: 905px) {
+@media (min-width: 940px) {
   .wrapper .container {
     display: flex;
     flex-direction: column;

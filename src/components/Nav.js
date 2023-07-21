@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink  } from 'react-router-dom';
 
 const Nav = (props) => {
   const [showNavbar, setShowNavbar] = useState(false);
@@ -25,7 +25,7 @@ const Nav = (props) => {
       <div className={`nav-elements ${showNavbar && 'active'}`}>
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <NavLink exact to="/">Home</NavLink>
           </li>
           <li>
             <a href="#about">About</a>
@@ -34,7 +34,7 @@ const Nav = (props) => {
             <a href="#menu">Menu</a>
           </li>
           <li>
-            <Link to="/reservations">Reservations</Link>
+            <NavLink to="/reservations">Reservations</NavLink>
           </li>
           <li>
             <a href="#order-online">Order Online</a>

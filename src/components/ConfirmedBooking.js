@@ -11,6 +11,7 @@ const ConfirmedBooking = () => {
       <Header />
       <div className="container">
         <h1 className='confirmation-header'>Booking has been confirmed!</h1>
+        <h2>Booking number: #58364</h2>
         <div className="confirmation-card">
           <h3 className='details'>Details of reservation</h3>
           <ul>
