@@ -4,7 +4,7 @@ const Card = ({ title, price, description, imgSrc }) => {
   return (
     <div className="card" role="region" aria-label={title}>
       <div className="card-image">
-        <img src={imgSrc} alt={title} height={'100%'} />
+        <img src={imgSrc} alt={title} />
       </div>
       <div className="card-body">
         <div className="card-header">

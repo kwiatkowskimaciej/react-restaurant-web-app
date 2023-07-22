@@ -122,6 +122,13 @@
     overflow: hidden;
     margin-bottom: 10px;
   }
+
+  .card-image img {
+    height: auto;
+    width: 100%;
+    object-fit: inherit;
+    border-radius: 16px 16px 0 0;
+  }
 }
 
 @media (max-width: 800px) {
