@@ -126,15 +126,15 @@ input[type='radio']:after {
   width: 16px;
   height: 16px;
   border-radius: 16px;
-  top: -2px;
-  left: -2px;
+  top: -3px;
+  left: -3px;
   position: relative;
   background-image: url('./images/check_circle_FILL0_wght400_GRAD-25_opsz24.svg');
-  background-position: -4px -4px;
+  background-position: -3px -3px;
   background-color: #fff;
   content: '';
   display: inline-block;
-  visibility: visible;
+  visibility: none;
   border: 1.5px solid var(--primary-1);
 }
 
@@ -142,15 +142,15 @@ input[type='radio']:checked:after {
   width: 16px;
   height: 16px;
   border-radius: 16px;
-  top: -4px;
-  left: -4px;
+  top: -3px;
+  left: -3px;
   position: relative;
   background-image: url('./images/check_circle_FILL1_wght400_GRAD-25_opsz24.svg');
   background-color: #fff;
   content: '';
   display: inline-block;
   visibility: visible;
-  border: 2px solid var(--primary-1);
+  border: 1.5px solid var(--primary-1);
 }
 
 .radio {
