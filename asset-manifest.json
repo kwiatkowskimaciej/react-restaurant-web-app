@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/react-restaurant-web-app/static/css/main.37013163.css",
-    "main.js": "/react-restaurant-web-app/static/js/main.092c8bbc.js",
+    "main.js": "/react-restaurant-web-app/static/js/main.48e7789c.js",
     "static/js/787.bde491a2.chunk.js": "/react-restaurant-web-app/static/js/787.bde491a2.chunk.js",
     "static/media/restauranfood.jpg": "/react-restaurant-web-app/static/media/restauranfood.6efd5bf8c9b21e35fc50.jpg",
     "static/media/greek_salad.jpg": "/react-restaurant-web-app/static/media/greek_salad.b12998a8884f64115125.jpg",
@@ -14,11 +14,11 @@
     "index.html": "/react-restaurant-web-app/index.html",
     "static/media/check_circle_FILL0_wght400_GRAD-25_opsz24.svg": "/react-restaurant-web-app/static/media/check_circle_FILL0_wght400_GRAD-25_opsz24.53b4fabbd0aea14420e8.svg",
     "main.37013163.css.map": "/react-restaurant-web-app/static/css/main.37013163.css.map",
-    "main.092c8bbc.js.map": "/react-restaurant-web-app/static/js/main.092c8bbc.js.map",
+    "main.48e7789c.js.map": "/react-restaurant-web-app/static/js/main.48e7789c.js.map",
     "787.bde491a2.chunk.js.map": "/react-restaurant-web-app/static/js/787.bde491a2.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.37013163.css",
-    "static/js/main.092c8bbc.js"
+    "static/js/main.48e7789c.js"
   ]
 }
