@@ -130,7 +130,7 @@ input[type='radio']:after {
   left: -3px;
   position: relative;
   background-image: url('./images/check_circle_FILL0_wght400_GRAD-25_opsz24.svg');
-  background-position: -3px -3px;
+  background-position: -4px -4px;
   background-color: #fff;
   content: '';
   display: inline-block;
@@ -151,6 +151,11 @@ input[type='radio']:checked:after {
   display: inline-block;
   visibility: visible;
   border: 1.5px solid var(--primary-1);
+}
+
+input:where([type="checkbox"], [type="radio"]):where(:active:not(:disabled), :focus){
+  border-color : white;
+  outline      : none;
 }
 
 .radio {
