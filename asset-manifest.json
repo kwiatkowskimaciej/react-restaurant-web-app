@@ -1,24 +1,25 @@
 {
   "files": {
-    "main.css": "/react-restaurant-web-app/static/css/main.04c6b82f.css",
-    "main.js": "/react-restaurant-web-app/static/js/main.f9ef72b6.js",
+    "main.css": "/react-restaurant-web-app/static/css/main.2ef34a49.css",
+    "main.js": "/react-restaurant-web-app/static/js/main.569d9e59.js",
     "static/js/787.bde491a2.chunk.js": "/react-restaurant-web-app/static/js/787.bde491a2.chunk.js",
-    "static/media/restauranfood.jpg": "/react-restaurant-web-app/static/media/restauranfood.6efd5bf8c9b21e35fc50.jpg",
-    "static/media/greek_salad.jpg": "/react-restaurant-web-app/static/media/greek_salad.b12998a8884f64115125.jpg",
-    "static/media/mario_and_adrian.jpg": "/react-restaurant-web-app/static/media/mario_and_adrian.4985eafa7956e987c2ec.jpg",
+    "static/media/restauranfood.webp": "/react-restaurant-web-app/static/media/restauranfood.b7186237ef752545b4c5.webp",
     "static/media/restaurant.jpg": "/react-restaurant-web-app/static/media/restaurant.324d0f99bdf19400a0f7.jpg",
-    "static/media/bruchetta.png": "/react-restaurant-web-app/static/media/bruchetta.211598fc6baa862190b7.png",
+    "static/media/greek_salad.webp": "/react-restaurant-web-app/static/media/greek_salad.d3c09fc8cfc8bc16a785.webp",
+    "static/media/mario_and_adrian.webp": "/react-restaurant-web-app/static/media/mario_and_adrian.ba0b85a1fba3ce61f233.webp",
+    "static/media/bruchetta.webp": "/react-restaurant-web-app/static/media/bruchetta.f372688f6610009f5edf.webp",
     "static/media/footer_logo.png": "/react-restaurant-web-app/static/media/footer_logo.2c859235d6c57bb54176.png",
     "static/media/logo.png": "/react-restaurant-web-app/static/media/logo.d4cae6fac8384c2dae04.png",
+    "static/media/lemon_dessert.webp": "/react-restaurant-web-app/static/media/lemon_dessert.06723e250cb4c722d986.webp",
     "static/media/check_circle_FILL1_wght400_GRAD-25_opsz24.svg": "/react-restaurant-web-app/static/media/check_circle_FILL1_wght400_GRAD-25_opsz24.2745a8ed1b62f4bf570b.svg",
     "index.html": "/react-restaurant-web-app/index.html",
     "static/media/check_circle_FILL0_wght400_GRAD-25_opsz24.svg": "/react-restaurant-web-app/static/media/check_circle_FILL0_wght400_GRAD-25_opsz24.53b4fabbd0aea14420e8.svg",
-    "main.04c6b82f.css.map": "/react-restaurant-web-app/static/css/main.04c6b82f.css.map",
-    "main.f9ef72b6.js.map": "/react-restaurant-web-app/static/js/main.f9ef72b6.js.map",
+    "main.2ef34a49.css.map": "/react-restaurant-web-app/static/css/main.2ef34a49.css.map",
+    "main.569d9e59.js.map": "/react-restaurant-web-app/static/js/main.569d9e59.js.map",
     "787.bde491a2.chunk.js.map": "/react-restaurant-web-app/static/js/787.bde491a2.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.04c6b82f.css",
-    "static/js/main.f9ef72b6.js"
+    "static/css/main.2ef34a49.css",
+    "static/js/main.569d9e59.js"
   ]
 }
