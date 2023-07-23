@@ -447,3 +447,7 @@ button:active {
 .not-found {
   grid-area: center;
 }
+
+header img {
+  cursor: pointer;
+}
