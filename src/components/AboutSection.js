@@ -38,7 +38,7 @@ const AboutSection = () => {
             />
             <img
               className={`${showImage && 'show-full'}`}
-              src={require('../images/mario_and_adrian.jpg')}
+              src={require('../images/mario_and_adrian.webp')}
               alt="Four bruschettas on a black wooden board"
               width={'420px'}
               onClick={handleClick}

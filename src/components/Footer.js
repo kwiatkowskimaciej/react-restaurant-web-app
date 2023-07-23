@@ -19,12 +19,12 @@ const Footer = () => {
           <ul>
             <li>
               <address>
-                444 Michigan Ave <br />
+                XXX Michigan Ave <br />
                 Chicago, IL
               </address>
             </li>
             <li>
-              <a href="tel:+11234567890">+1 123-456-7890</a>
+              <a href="tel:+11234567890">+1 123-XXX-7890</a>
             </li>
             <li>
               <a href="mailto:little@lemon.com">little@lemon.com</a>

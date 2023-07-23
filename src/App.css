@@ -443,3 +443,7 @@ button:active {
   object-position: 82%;
   margin-left: -3rem;
 }
+
+.not-found {
+  grid-area: center;
+}

@@ -7,21 +7,21 @@ const specials = [
     price: 12.99,
     description:
       'The famous Greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons.',
-    getImageSrc: () => require('../images/greek_salad.jpg'),
+    getImageSrc: () => require('../images/greek_salad.webp'),
   },
   {
     title: 'Bruschetta',
     price: 12.99,
     description:
       'Our Bruschetta is made from grilled bread that has been smeared with garlic and seasoned with salt and olive oil.',
-    getImageSrc: () => require('../images/bruchetta.png'),
+    getImageSrc: () => require('../images/bruchetta.webp'),
   },
   {
     title: 'Lemon Dessert',
     price: 12.99,
     description:
       'This comes straight from grandma’s recipe book, every last ingredient has been sourced and is as authentic as can be imagined.',
-    getImageSrc: () => require('../images/lemon_dessert.jpg'),
+    getImageSrc: () => require('../images/lemon_dessert.webp'),
   },
 ];
 

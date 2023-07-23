@@ -30,7 +30,7 @@ const LandingSection = () => {
           </div>
           <div className="hero-image">
             <img
-              src={require('../images/restauranfood.jpg')}
+              src={require('../images/restauranfood.webp')}
               alt="Four bruschettas on a black wooden board"
               width={'420px'}
             />

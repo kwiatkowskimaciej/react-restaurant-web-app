@@ -28,19 +28,19 @@ const Nav = (props) => {
             <NavLink exact to="/">Home</NavLink>
           </li>
           <li>
-            <a href="#about">About</a>
+            <NavLink to="/about">About</NavLink>
           </li>
           <li>
-            <a href="#menu">Menu</a>
+            <NavLink to="/menu">Menu</NavLink>
           </li>
           <li>
             <NavLink to="/reservations">Reservations</NavLink>
           </li>
           <li>
-            <a href="#order-online">Order Online</a>
+            <NavLink to="/order-online">Order Online</NavLink>
           </li>
           <li>
-            <a href="#login">Login</a>
+            <NavLink to="/login">Login</NavLink>
           </li>
         </ul>
       </div>
