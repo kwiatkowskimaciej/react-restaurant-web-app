@@ -153,11 +153,6 @@ input[type='radio']:checked:after {
   border: 1.5px solid var(--primary-1);
 }
 
-input:where([type="checkbox"], [type="radio"]):where(:active:not(:disabled), :focus){
-  border-color : white;
-  outline      : none;
-}
-
 .radio {
   display: flex;
   align-items: center;
