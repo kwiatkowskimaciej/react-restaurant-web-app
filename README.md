@@ -11,7 +11,7 @@
 
 
 ## Demo
-Here is a working live demo:  [Little Lemon website](https://kwiatkowskimaciej.github.io/react-restaurant-web-app/)
+Here is a working live demo: [Little Lemon website](https://kwiatkowskimaciej.github.io/react-restaurant-web-app/)
 
 ## Built with
 
@@ -22,7 +22,7 @@ Here is a working live demo:  [Little Lemon website](https://kwiatkowskimaciej.g
 
 ## Site
 
-## Responsive desgin
+## Responsive design
 The Little Lemon restaurant web app is compatible with devices of all sizes.
 ![](screenshots/all-devices.png)
 
